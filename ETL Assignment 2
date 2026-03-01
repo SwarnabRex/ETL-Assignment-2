@@ -1,0 +1,91 @@
+# ETL Assignment
+
+## Question 1: Define Data Transformation in ETL and explain why it is important.
+
+Data Transformation in ETL (Extract, Transform, Load) is the process of converting raw data into a structured and usable format before loading it into a target system such as a data warehouse.
+
+It is important because:
+- It improves data quality.
+- It ensures consistency in data.
+- It removes errors and duplicates.
+- It prepares data for analysis and reporting.
+
+---
+
+## Question 2: List any four common activities involved in Data Cleaning.
+
+1. Handling missing values.
+2. Removing duplicate records.
+3. Correcting inconsistent data formats.
+4. Fixing incorrect or invalid data entries.
+
+---
+
+## Question 3: What is the difference between Normalization and Standardization?
+
+Normalization:
+- Scales data to a fixed range, usually 0 to 1.
+- Formula: (X - Min) / (Max - Min).
+- Suitable when there are no major outliers.
+
+Standardization:
+- Scales data using mean and standard deviation.
+- Formula: (X - Mean) / Standard Deviation.
+- Suitable when outliers are present.
+
+---
+
+## Question 4: A dataset has missing values in the "Age" column. Suggest two techniques to handle this and explain when they should be used.
+
+1. Mean or Median Imputation:
+   - Replace missing values with mean or median.
+   - Use mean if data is normally distributed.
+   - Use median if outliers are present.
+
+2. Row Deletion:
+   - Remove rows with missing Age values.
+   - Use when missing values are very few.
+
+---
+
+## Question 5: Convert the following inconsistent "Gender" entries into a standardized format ("Male", "Female").
+
+Input:
+["M", "male", "F", "Female", "MALE", "f"]
+
+Output:
+["Male", "Male", "Female", "Female", "Male", "Female"]
+
+---
+
+## Question 6: What is One-Hot Encoding? Give an example with the categories: "Red, Blue, Green".
+
+One-Hot Encoding is a method to convert categorical data into numerical format by creating separate binary columns for each category.
+
+Example:
+
+| Color | Red | Blue | Green |
+|-------|-----|------|-------|
+| Red   | 1   | 0    | 0     |
+| Blue  | 0   | 1    | 0     |
+| Green | 0   | 0    | 1     |
+
+---
+
+## Question 7: Explain the difference between Data Integration and Data Mapping in ETL.
+
+Data Integration:
+- Combining data from multiple sources into one dataset.
+
+Data Mapping:
+- Defining how source fields match target fields.
+
+---
+
+## Question 8: Explain why Z-score Standardization is preferred over Min-Max Scaling when outliers exist.
+
+Z-score Standardization uses mean and standard deviation, so it is less affected by extreme values.
+
+Min-Max Scaling depends on minimum and maximum values, so outliers can heavily distort the results.
+
+Therefore, Z-score Standardization is preferred when outliers are present.
